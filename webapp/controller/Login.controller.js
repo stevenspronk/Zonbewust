@@ -17,6 +17,10 @@ sap.ui.define([
 			sap.ui.getCore().setModel(resourceModel, "i18n");
 		},
 
+		onDonate: function() {
+			window.open("https://secure.kwf.nl/ikdoneervoor?utm_source=il-64#donate_form");
+		},
+		
 		onAddAccount: function() {
 			//Nieuw account toevoegen
 			//Resource bundle ophalen
