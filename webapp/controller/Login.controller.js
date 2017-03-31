@@ -18,6 +18,7 @@ sap.ui.define([
 		},
 
 		onAddAccount: function() {
+			//Nieuw account toevoegen
 			//Resource bundle ophalen
 			var resourceBundle = sap.ui.getCore().getModel("i18n").getResourceBundle();
 
@@ -33,12 +34,27 @@ sap.ui.define([
 		},
 		
 		onCloseAccount: function() {
+			//Sluiten van de AddAccount Dialog
 			this._oDialog.close();
 			this._oDialog.destroy();
 		},
 		
 		onStart: function() {
-			this.onCloseAccount();
+			//Start Event dat leidt naar het GameScreen
+			//Dit kan via de AddAccount Dialog of door direct een van de bestaande accounts te kiezen
+			if (this._oDialog) {
+				this.onCloseAccount();	
+			}
+			
+			//Event voor navigatie-routing naar Gamescreen
+			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+			oRouter.navTo("GameScreen", { //Router navigation is done in manifest.json
+				id: 1
+			}, false);
+		},
+		
+		onCheck: function() {
+			//Quiz Dialog verificatie event
 		}
 	});
 });
