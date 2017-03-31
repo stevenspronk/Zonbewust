@@ -1,1 +1,14 @@
 /* Enter your custom styles here */
+.loginPage {
+	background-image: url('../images/background/login.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.logo {
+	margin-top: 30px;
+}
+
+.loginButtons {
+	padding: 30px;
+}
