@@ -39,7 +39,7 @@ sap.ui.define([
 			this._oDialog.destroy();
 		},
 		
-		onStart: function() {
+		onStart: function(oEvent) {
 			//Start Event dat leidt naar het GameScreen
 			//Dit kan via de AddAccount Dialog of door direct een van de bestaande accounts te kiezen
 			if (this._oDialog) {
@@ -48,9 +48,10 @@ sap.ui.define([
 			
 			//Event voor navigatie-routing naar Gamescreen
 			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
-			oRouter.navTo("GameScreen", { //Router navigation is done in manifest.json
-				id: 1
-			}, false);
+			oRouter.navTo("gamescreen");
+			
+	
+		
 		},
 		
 		onCheck: function() {

@@ -1,39 +1,32 @@
-<mvc:View xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="Zonbewust.controller.Login"
-	displayBlock="true">
-	<App>
-		<pages>
-			<Page title="{i18n>title}">
-				<content>
-					<Table id="userList" width="auto" items="{GebruikersSet}" noDataText="{i18n>geenGebruikers}"
-						busyIndicatorDelay="{detailView>/userListDelay}" class="sapUiSmallMargin">
-						<!--<headerToolbar>-->
-						<!--	<Toolbar>-->
-						<!--		<Title id="statusFlow" text="{i18n>statusFlow}"/>-->
-						<!--	</Toolbar>-->
-						<!--</headerToolbar>-->
-						<columns>
-							<!--<Column width="30%">-->
-							<!--	<Text text="{i18n>userName}"/>-->
-							<!--</Column>-->
-							<!--<Column width="30%">-->
-							<!--	<Text text="{i18n>Status}"/>-->
-							<!--</Column>-->
-							<!--<Column width="30%">-->
-							<!--	<Text text="{i18n>BehandeldDoor}"/>-->
-							<!--</Column>-->
-						</columns>
-						<items id="itemsUsers">
-							<ColumnListItem id="columnsUsersDisplay">
-								<cells>
-									<!--<ObjectIdentifier title="{SamengesteldeNaam}" text="{path: 'Personeelsnummer', formatter: 'bpo.ui5.lib.utils.formatter.truncLeadingZeros' }"/>-->
-									<Text text="{SamengesteldeNaam}"/>
-								</cells>
-							</ColumnListItem>
-						</items>
-					</Table>
-					<Button text="{i18n>btnAdd}" width="100px" id="btnAdd" press="onAddAccount"/>
-				</content>
-			</Page>
-		</pages>
-	</App>
+<mvc:View xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="Zonbewust.controller.Login">
+	<Page title="title">
+		<Table id="userList" width="auto" items="{GebruikersSet}" noDataText="{i18n>geenGebruikers}"
+			busyIndicatorDelay="{detailView>/userListDelay}" class="sapUiSmallMargin">
+			<!--<headerToolbar>-->
+			<!--	<Toolbar>-->
+			<!--		<Title id="statusFlow" text="{i18n>statusFlow}"/>-->
+			<!--	</Toolbar>-->
+			<!--</headerToolbar>-->
+			<columns>
+				<!--<Column width="30%">-->
+				<!--	<Text text="{i18n>userName}"/>-->
+				<!--</Column>-->
+				<!--<Column width="30%">-->
+				<!--	<Text text="{i18n>Status}"/>-->
+				<!--</Column>-->
+				<!--<Column width="30%">-->
+				<!--	<Text text="{i18n>BehandeldDoor}"/>-->
+				<!--</Column>-->
+			</columns>
+			<items id="itemsUsers">
+				<ColumnListItem id="columnsUsersDisplay">
+					<cells>
+						<!--<ObjectIdentifier title="{SamengesteldeNaam}" text="{path: 'Personeelsnummer', formatter: 'bpo.ui5.lib.utils.formatter.truncLeadingZeros' }"/>-->
+						<Text text="{SamengesteldeNaam}"/>
+					</cells>
+				</ColumnListItem>
+			</items>
+		</Table>
+		<Button text="{i18n>btnAdd}" width="100px" id="btnAdd" press="onAddAccount"/>
+	</Page>
 </mvc:View>

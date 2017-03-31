@@ -33,7 +33,7 @@
 	},
 	"sap.ui5": {
 		"rootView": {
-			"viewName": "Zonbewust.view.Login",
+			"viewName": "Zonbewust.view.App",
 			"type": "XML"
 		},
 		"dependencies": {
@@ -67,26 +67,49 @@
 		},
 		"routing": {
 			"targets": {
-				"GameScreen": {
+				"login": {
 					"viewType": "XML",
-					"transition": "show",
+					"transition": "slide",
 					"clearAggregation": true,
-					"viewName": "GameScreen",
-					"viewId": "gamescreen"
+					"viewName": "Login"
+				},
+				"leaderboard": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearAggregation": true,
+					"viewName": "Leaderboard"
+				},
+				"gamescreen": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearAggregation": true,
+					"viewName": "GameScreen"
 				}
 			},
 			"routes": [{
-				"name": "GameScreen",
-				"pattern": "GameScreen",
+				"name": "login",
+				"pattern": "",
 				"titleTarget": "",
 				"greedy": false,
-				"target": ["GameScreen"]
+				"target": ["login"]
+			}, {
+				"name": "leaderboard",
+				"pattern": "leaderboard",
+				"titleTarget": "",
+				"greedy": false,
+				"target": ["leaderboard"]
+			}, {
+				"name": "gamescreen",
+				"pattern": "gamescreen",
+				"titleTarget": "",
+				"greedy": false,
+				"target": ["gamescreen"]
 			}],
 			"config": {
 				"routerClass": "sap.m.routing.Router",
-		"viewPath": "view.GameScreen",
+				"viewPath": "Zonbewust.view",
 				"viewLevel": 1,
-				"controlId": "Login",
+				"controlId": "App",
 				"controlAggregation": "pages",
 				"transition": "show"
 			}
