@@ -30,6 +30,15 @@ sap.ui.define([
 			}
 			this.getView().addDependent(this._oDialog);
 			this._oDialog.open();
+		},
+		
+		onCloseAccount: function() {
+			this._oDialog.close();
+			this._oDialog.destroy();
+		},
+		
+		onStart: function() {
+			this.onCloseAccount();
 		}
 	});
 });
