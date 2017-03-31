@@ -14,7 +14,6 @@
 			"version": "1.40.12"
 		}
 	},
-
 	"sap.ui": {
 		"technology": "UI5",
 		"icons": {
@@ -30,13 +29,8 @@
 			"tablet": true,
 			"phone": true
 		},
-		"supportedThemes": [
-			"sap_hcb",
-			"sap_belize"
-
-		]
+		"supportedThemes": ["sap_hcb", "sap_belize"]
 	},
-
 	"sap.ui5": {
 		"rootView": {
 			"viewName": "Zonbewust.view.Login",
@@ -70,6 +64,32 @@
 			"css": [{
 				"uri": "css/style.css"
 			}]
+		},
+		"routing": {
+			"targets": {
+				"GameScreen": {
+					"viewType": "XML",
+					"transition": "show",
+					"clearAggregation": true,
+					"viewName": "GameScreen",
+					"viewId": "gamescreen"
+				}
+			},
+			"routes": [{
+				"name": "GameScreen",
+				"pattern": "GameScreen",
+				"titleTarget": "",
+				"greedy": false,
+				"target": ["GameScreen"]
+			}],
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+		"viewPath": "view.GameScreen",
+				"viewLevel": 1,
+				"controlId": "Login",
+				"controlAggregation": "pages",
+				"transition": "show"
+			}
 		}
 	}
 }
