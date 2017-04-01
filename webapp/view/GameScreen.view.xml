@@ -4,19 +4,15 @@
 		<pages>
 			<Page title="{i18n>GameScreenTitle}" class="gamePage" showHeader="false">
 				<content>
-					<ScrollContainer width="100%" height="100%" xmlns:core="sap.ui.core" xmlns:sap.ui.layout="sap.ui.layout" >
-						
-						
-
-					<Image height="calc(100% - 35%)" class="gameCharacter" id="gameCharacter" src="images/body/1_red.svg" press="onStart"/>
-					<Image height="calc(100% - 60%)" class="gameIcon" id="gameTube" src="images/icons/parasol.svg" press="onAction"/>
-	
-	
-						
-						
-						
-						
-						
+					<ScrollContainer xmlns:core="sap.ui.core" xmlns:sap.ui.layout="sap.ui.layout" width="100%" height="100%">
+						<Panel class="overlayContainer" height="100%" width="100%">
+							<content> 
+								<Image height="40%" class="gameMessage" id="gameMessage" src="images/message_1.svg"/>
+								<Image height="70%" class="gameCharacter" id="gameCharacter" src="images/body/1_red.svg" press="onStart"/>
+								<!--<Image height="calc(100% - 70%)" class="gameIcon" id="gameTube" src="images/icons/tube.svg" press="onTube"/>-->
+								<Image height="50%" class="gameParasol" id="gameParasol" src="images/icons/parasol.svg" press="onParasol"/>
+							</content>
+						</Panel>
 						<!--<sap.ui.layout:FixFlex class="fixFlexVertical">-->
 						<!--	<sap.ui.layout:fixContent height="5%">-->
 						<!--		<Text class="labelWarning" text="Blijf nog uit de zon voor:"></Text>-->

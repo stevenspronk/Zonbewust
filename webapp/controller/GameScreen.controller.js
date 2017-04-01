@@ -5,24 +5,23 @@ sap.ui.define([
 
 	return Controller.extend("Zonbewust.controller.GameScreen", {
 
-
+ 
 		onInit: function() {
 			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
 			oRouter.getRoute("gamescreen").attachMatched(this._onRouteMatched, this);
-			
-			
-			
 		},
+		
 		_onRouteMatched: function(oEvent) {
 
 			var	oArgs = oEvent.getParameter("arguments");
-
+			var self = this;
 			var oUsers = this.getView().getModel("oUsers");
 			var path = "/Z_User(name='" + oArgs.name + "')";
 
 			oUsers.read(path, {
 				success: function(oData, response) {
-					console.log(oData);
+					var data = new sap.ui.model.json.JSONModel(oData);
+					self.getView().setModel(data); 
 				},
 				error: function(oError) {
 					sap.m.MessageToast.show(oError.message);
@@ -30,6 +29,12 @@ sap.ui.define([
 			});
 
 		},
+		
+		onAfterRendering : function ()
+		{
+			
+		},
+		
 
 		onBack  : function() {
 				//Start Event dat leidt naar het GameScreen
@@ -43,7 +48,12 @@ sap.ui.define([
 			oRouter.navTo("login");
 		},
 		
-		onAction  : function() {
+		onParasol  : function() {
+			this.getView().byId("gameMessage").addStyleClass("gameMessage");
+			this.getView().byId("gameParasol").setVisible(false);
+		},
+		
+		onTube  : function() {
 			
 			this.getView().byId("gameCharacter").setSrc('images/body/1.svg');
 			this.getView().byId("gameTube").setVisible(false);

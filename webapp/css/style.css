@@ -1,77 +1,88 @@
-html, body
-{
+html,
+body {
     height: 100%;
 }
 
-.sapMScrollContScroll
-{
-	height: 100%;
-	vertical-align: bottom;
+.sapMScrollContScroll {
+    height: 100%;
+    vertical-align: bottom;
 }
+
+
 /* Enter your custom styles here */
+
 .loginPage {
-	background-image: url('../images/background/login.svg');
+    background-image: url('../images/background/login.svg');
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 .logo {
-	margin-top: 30px;
-	margin-bottom: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 .loginButtons {
-	padding: 10px;
+    padding: 10px;
 }
 
-.loginTiles
-{
-	font-color: white;
-	font-weight: bold;
-	text-align: center;
-	background: url('../images/circle.svg');
+.loginTiles {
+    font-color: white;
+    font-weight: bold;
+    text-align: center;
+    background: url('../images/circle.svg');
     background-size: cover;
     background-repeat: no-repeat;
-     border: none;
-     box-shadow: none;
-    
+    border: none;
+    box-shadow: none;
 }
 
 .loginTilesContainer {
-	font-color: white;
-	text-align: center;
+    font-color: white;
+    text-align: center;
 }
 
 .loginLabelUser {
-	font-weight: bold;
+    font-weight: bold;
 }
 
 .loginLabelPoints {
-	font-style: italic;
+    font-style: italic;
 }
 
 .gamePage {
-	background-image: url('../images/background/beach2.svg');
+    background-image: url('../images/background/beach2.svg');
     background-size: cover;
     background-repeat: no-repeat;
 }
 
-.gameCharacter
-{
-margin-top: 15%;
-margin-left: 30%;
-float: left;
+.gameCharacter {
+    margin-top: 10%;
 }
 
-.gameIcon {
-	margin-top: 30%;
-	margin-left: 10px;
-	float: left;
-}
-.gameToolbar
-{
+.gameParasol {
+    margin-left: 22%;
+    margin-top: 20%;
 }
 
-.flexEx .sapMFlexItem:first-child {
-                height: calc(100% - 50px) !important;
-            }
+.gameMessage {
+    margin-left: -22%;
+    margin-top: 0%;
+    z-index: 100;
+    display:block;
+    visibility: visible;
+}
+
+.overlayContainer {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+
+.overlayContainer img {
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+}

@@ -5,20 +5,20 @@
 			<Page title="{i18n>title}" class="loginPage" showHeader="false" navButtonText="test" showNavButton="true" floatingFooter="false">
 				<content>
 					<Image width="100%" height="20%" class="logo" src="images/logo.svg"/>
-					<ScrollContainer id="PandaContent" height="60%" width="100%" horizontal="true" vertical="true" focusable="false">
-						<!--<sap.ui.layout:Grid  xmlns:sap.ui.layout="sap.ui.layout" id="__grid0" class="loginTilesContainer">-->
-						<!--	<sap.ui.layout:content>-->
-								<!--<CustomTile>-->
-								<!--	<content>-->
-								<!--		<sap.ui.layout:VerticalLayout>-->
-								<!--			<Image src="images/faces/1_red.svg" height="100%" width="100%" press="onStart"/>-->
-								<!--			<Label text="Panda Joury" class="loginLabelUser"/>-->
-								<!--			<Label text="3231 Bamboos" class="loginLabelPoints"/>-->
-								<!--		</sap.ui.layout:VerticalLayout>-->
-								<!--	</content>-->
-								<!--</CustomTile>-->
-						<!--	</sap.ui.layout:content>-->
-						<!--</sap.ui.layout:Grid>-->
+					<ScrollContainer height="60%" width="100%" horizontal="true" vertical="true" focusable="false">
+						<sap.ui.layout:Grid xmlns:sap.ui.layout="sap.ui.layout" id="__grid0" class="loginTilesContainer">
+							<sap.ui.layout:content>
+								<CustomTile>
+									<content>
+										<sap.ui.layout:VerticalLayout>
+											<Image src="images/faces/1_red.svg" height="100%" width="100%" press="onStart"/>
+											<Label text="Panda Joury" class="loginLabelUser"/>
+											<Label text="3231 Bamboos" class="loginLabelPoints"/>
+										</sap.ui.layout:VerticalLayout>
+									</content>
+								</CustomTile>
+							</sap.ui.layout:content>
+						</sap.ui.layout:Grid>
 						<!--<Table id="userList" width="auto" items="{GebruikersSet}" noDataText="{i18n>geenGebruikers}"-->
 						<!--	busyIndicatorDelay="{detailView>/userListDelay}" class="sapUiSmallMargin">-->
 							<!--<headerToolbar>-->
@@ -60,4 +60,4 @@
 			</Page>
 		</pages>
 	</App>
-	</mvc:View>
+</mvc:View>
