@@ -38,6 +38,10 @@ sap.ui.define([
 
 		},
 
+		onDonate: function() {
+			window.open("https://secure.kwf.nl/ikdoneervoor?utm_source=il-64#donate_form");
+		},
+		
 		onAddAccount: function() {
 
 			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
