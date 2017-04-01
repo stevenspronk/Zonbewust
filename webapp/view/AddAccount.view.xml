@@ -1,24 +1,39 @@
 <mvc:View xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
 	controllerName="Zonbewust.controller.AddAccount" xmlns:vhd="sap.ui.comp.valuehelpdialog" xmlns:core="sap.ui.core"
 	xmlns:filterbar="sap.ui.comp.filterbar" xmlns:form="sap.ui.layout.form" xmlns:l="sap.ui.layout">
-	<Page title="{i18n>GameScreenTitle}">
-		<content>
-			<form:SimpleForm editable="true" layout="ResponsiveGridLayout" id="formChangeAccount" minWidth="1024" maxContainerCols="2" labelSpanL="4"
+	<App>
+		<pages>
+			<Page title="{i18n>GameScreenTitle}" class="loginPage" showHeader="false" navButtonText="test" showNavButton="true" floatingFooter="false">
+				<content>
+					<Image width="100%" height="30%" class="logo" src="images/logo.svg"/>
+					<ScrollContainer id="PandaContent" height="50%" width="100%" horizontal="true" vertical="true" focusable="false">
+<Panel class="overlayContainer" height="100%" width="100%">
+	<content>
+			<form:SimpleForm editable="true" layout="ResponsiveGridLayout" id="formChangeAccount"   maxContainerCols="2" labelSpanL="4"
 				labelSpanM="4" emptySpanL="0" emptySpanM="0" columnsL="2" columnsM="2" class="editableForm" labelMinWidth="250">
 				<form:content>
-					<core:Title text="{i18n>registreer}" id="coreRegistratieTitle"/>
-					<Label labelFor="txtSamengesteldeNaam" text="{i18n>naam}" id="lblSamengesteldeNaam" required="true"/>
-					<Input id="txtSamengesteldeNaam" value="{/name}" width="60%"/>
-					<Label labelFor="txtLeeftijd" text="{i18n>leeftijd}" id="lblLeeftijd" required="true"/>
-					<Input id="txtLeeftijd" value="{/age}" width="60%"/>
-					<Label text="{i18n>panda}" id="lblPandaGeslacht" required="true"/>
-					<ToggleButton id="btnMale" width="60%"/>
-					<ToggleButton id="btnFemale" width="60%"/>
-					<Label labelFor="txtNaamPanda" text="{i18n>naamPanda}" id="lblNaamPanda"/>
-					<Input id="txtNaamPanda" value="{/panda_name}" width="60%"/>
+					<Label width="50%" labelFor="txtSamengesteldeNaam" text="{i18n>naam}" id="lblSamengesteldeNaam" required="true"/>
+					<Input  width="50%" id="txtSamengesteldeNaam" value="{/name}" />
+					<Label  width="50%" labelFor="txtLeeftijd" text="{i18n>leeftijd}" id="lblLeeftijd" required="true"/>
+					<Input  width="50%" id="txtLeeftijd" value="{/age}" />
+					<Label  width="50%" text="{i18n>panda}" id="lblPandaGeslacht" required="true"/>
+					<ToggleButton width="25%" id="btnMale" text="Jongen"/>
+					<ToggleButton width="25%" id="btnFemale" text="Meisje" />
+					<Label  width="50%" labelFor="txtNaamPanda" text="{i18n>naamPanda}" id="lblNaamPanda"/>
+					<Input  width="50%" id="txtNaamPanda"  value="{/panda_name}"/>
 				</form:content>
 			</form:SimpleForm>
 			<Button text="{i18n>btnStart}" width="120px" id="btnStart" press="onSave"/>
-		</content>
-	</Page>
-</mvc:View>
+			</content></Panel>
+					</ScrollContainer>
+					
+				</content> 
+				<footer>
+<Toolbar height="15%" design="Transparent">
+						<Image height="70%" src="images/icons/back.svg" class="loginButtons" id="btnBack" press="onBack"/>
+					</Toolbar>
+				</footer>
+			</Page>
+		</pages>
+	</App>
+	</mvc:View>
