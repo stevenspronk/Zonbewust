@@ -12,7 +12,7 @@ sap.ui.define([
 				"age": null,
 				"panda_gender": null,
 				"panda_name": null,
-				"bamboo": null,
+				"bamboo": 0,
 				"panda_color": "green"
 			};
 
