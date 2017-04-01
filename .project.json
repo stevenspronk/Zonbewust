@@ -19,6 +19,11 @@
       "templateId": "ui5template.basicSAPUI5ApplicationProject",
       "templateVersion": "1.40.12",
       "dateTimeStamp": "Fri, 31 Mar 2017 14:53:57 GMT"
+    },
+    {
+      "templateId": "servicecatalog.connectivityComponent",
+      "templateVersion": "0.0.0",
+      "dateTimeStamp": "Fri, 31 Mar 2017 21:02:23 GMT"
     }
   ],
   "codeCheckingTriggers": {
@@ -42,6 +47,26 @@
   },
   "hybrid": {
     "hatVersion": "1.25.3",
-    "appNamespace": "Zonbewust"
+    "appNamespace": "Zonbewust",
+    "backendDestination": "SAP_MCCOY",
+    "oDataConfigs": [
+      {
+        "hybridOdata": {
+          "name": "Z_user_cds",
+          "serviceUrl": ""
+        },
+        "originOdata": {
+          "name": "Z_user_cds",
+          "serviceUrl": "/sap/opu/odata/sap/Z_user_cds/"
+        }
+      }
+    ]
+  },
+  "mockpreview": {
+    "mockUri": "/sap/opu/odata/sap/Z_user_cds",
+    "metadataFilePath": "",
+    "loadJSONFiles": false,
+    "loadCustomRequests": false,
+    "mockRequestsFilePath": ""
   }
 }

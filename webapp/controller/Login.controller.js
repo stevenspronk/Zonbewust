@@ -15,45 +15,46 @@ sap.ui.define([
 				bundleName: "Zonbewust.controller.i18n"
 			});
 			sap.ui.getCore().setModel(resourceModel, "i18n");
+
+		},
+
+		onAfterRendering: function() {
+			var oUsers = this.getView().getModel("oUsers");
+			var path = "/Z_User";
+			oUsers.read(path, {
+				success: function(oData, response) {
+				
+				// oData.results[];
+				for (var i = 0; i < oData.results.length; i++) { 
+				
+				//console.log(oData.results[i]);
+}
+				
+				},
+				error: function(oError) {
+					sap.m.MessageToast.show(oError.message);
+				}
+			});
+
 		},
 
 		onAddAccount: function() {
-			//Nieuw account toevoegen
-			//Resource bundle ophalen
-			var resourceBundle = sap.ui.getCore().getModel("i18n").getResourceBundle();
 
-			//Account toevoegen Dialog popup
-			this._oDialog = null;
+			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+			oRouter.navTo("addaccount");
 
-			if (!this._oDialog) {
-				this._oDialog = sap.ui.xmlfragment("Zonbewust.view.AddAccount", this);
-
-			}
-			this.getView().addDependent(this._oDialog);
-			this._oDialog.open();
 		},
-		
-		onCloseAccount: function() {
-			//Sluiten van de AddAccount Dialog
-			this._oDialog.close();
-			this._oDialog.destroy();
-		},
-		
+
 		onStart: function(oEvent) {
 			//Start Event dat leidt naar het GameScreen
 			//Dit kan via de AddAccount Dialog of door direct een van de bestaande accounts te kiezen
-			if (this._oDialog) {
-				this.onCloseAccount();	
-			}
-			
+
 			//Event voor navigatie-routing naar Gamescreen
 			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
 			oRouter.navTo("gamescreen");
-			
-	
-		
+
 		},
-		
+
 		onCheck: function() {
 			//Quiz Dialog verificatie event
 		}

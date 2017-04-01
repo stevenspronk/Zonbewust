@@ -1,25 +1,24 @@
-<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:vhd="sap.ui.comp.valuehelpdialog"
+<mvc:View xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+	controllerName="Zonbewust.controller.AddAccount" xmlns:vhd="sap.ui.comp.valuehelpdialog" xmlns:core="sap.ui.core"
 	xmlns:filterbar="sap.ui.comp.filterbar" xmlns:form="sap.ui.layout.form" xmlns:l="sap.ui.layout">
-	<Dialog title="{i18n>accountAanmaken}" contentWidth="1024px" contentHeight="500px" resizable="true" draggable="true">
-		<VBox fitContainer="true">
+	<Page title="{i18n>GameScreenTitle}">
+		<content>
 			<form:SimpleForm editable="true" layout="ResponsiveGridLayout" id="formChangeAccount" minWidth="1024" maxContainerCols="2" labelSpanL="4"
 				labelSpanM="4" emptySpanL="0" emptySpanM="0" columnsL="2" columnsM="2" class="editableForm" labelMinWidth="250">
 				<form:content>
 					<core:Title text="{i18n>registreer}" id="coreRegistratieTitle"/>
 					<Label labelFor="txtSamengesteldeNaam" text="{i18n>naam}" id="lblSamengesteldeNaam" required="true"/>
-					<Input id="txtSamengesteldeNaam" value="{name}" width="60%"/>
+					<Input id="txtSamengesteldeNaam" value="{oUsers>name}" width="60%"/>
 					<Label labelFor="txtLeeftijd" text="{i18n>leeftijd}" id="lblLeeftijd" required="true"/>
-					<Input id="txtLeeftijd" value="{age}" width="60%"/>
+					<Input id="txtLeeftijd" value="{oUsers>age}" width="60%"/>
 					<Label text="{i18n>panda}" id="lblPandaGeslacht" required="true"/>
 					<ToggleButton id="btnMale" width="60%"/>
 					<ToggleButton id="btnFemale" width="60%"/>
 					<Label labelFor="txtNaamPanda" text="{i18n>naamPanda}" id="lblNaamPanda"/>
-					<Input id="txtNaamPanda" value="{panda_name}" width="60%"/>
+					<Input id="txtNaamPanda" value="{oUsers>panda_name}" width="60%"/>
 				</form:content>
 			</form:SimpleForm>
-		</VBox>
-		<endButton>
 			<Button text="{i18n>btnStart}" width="120px" id="btnStart" press="onSave"/>
-		</endButton>
-	</Dialog>
-</core:FragmentDefinition>
+		</content>
+	</Page>
+</mvc:View>
