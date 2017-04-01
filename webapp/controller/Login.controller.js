@@ -33,9 +33,8 @@ sap.ui.define([
 					for (var i = 0; i < oData.results.length; i++) {
 
 						var data = new sap.ui.model.json.JSONModel(oData.results[i]);
-
-						var oFragment = sap.ui.xmlfragment("Zonbewust.view.PandaTile", this);
-						 oFragment.setModel(data); 
+						var oFragment = sap.ui.xmlfragment("Zonbewust.view.PandaTile", self);
+						oFragment.setModel(data); 
 						pandaContent.addContent(oFragment);
 
 					}
