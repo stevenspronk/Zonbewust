@@ -9,9 +9,6 @@ sap.ui.define([
 
 	return Controller.extend("Zonbewust.controller.Login", {
 
-  
-
-
 		onInit: function() {
 			//Resource model opbouwen en vastleggen in de SAP.UI Core, model i18n.
 			var resourceModel = new ResourceModel({
@@ -59,6 +56,11 @@ sap.ui.define([
 			var url = "https://secure.kwf.nl/ikdoneervoor?utm_source=il-64#donate_form";
 			window.open(url);
 		},
+		
+		imageFormatter : function(value) {
+    		var imageSrc = "images/faces/1_" + value + ".svg";
+    		return imageSrc;
+		},
 
 		onAddAccount: function() {
 
@@ -68,8 +70,7 @@ sap.ui.define([
 		},
 
 		onStart: function(oEvent) {
-		sap.m.MessageToast.show("Jeeh");
-
+			sap.m.MessageToast.show("Jeeh");
 		},
 
 		onCheck: function() {
