@@ -37,6 +37,11 @@ body {
     box-shadow: none;
 }
 
+.sapMScrollContScroll {
+    vertical-align: bottom;
+    text-align: center;
+}
+
 .loginTilesContainer {
     font-color: white;
     text-align: center;

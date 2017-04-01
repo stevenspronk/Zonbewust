@@ -45,7 +45,11 @@ sap.ui.define([
 		},
 
 		toGameScreen: function(oEvent) {
+<<<<<<< HEAD
 			var navName = sap.ui.getCore().byId(oEvent.getParameters().id).getModel().getData().name;
+=======
+		var navName = sap.ui.getCore().byId(oEvent.getParameters().id).getModel().getData().name;
+>>>>>>> branch 'master' of https://github.com/stevenspronk/Zonbewust
 			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
 
 			oRouter.navTo("gamescreen", {
@@ -57,15 +61,25 @@ sap.ui.define([
 			var url = "https://secure.kwf.nl/ikdoneervoor?utm_source=il-64#donate_form";
 			window.open(url);
 		},
+		
+		imageFormatter : function(value) {
+    		var imageSrc = "images/faces/1_" + value + ".svg";
+    		return imageSrc;
+		},
 
 		onAddAccount: function() {
 			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
 			oRouter.navTo("addaccount");
 		},
 
+<<<<<<< HEAD
 		onLeaderBoard: function() {
 			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
 			oRouter.navTo("leaderboard");
+=======
+		onStart: function(oEvent) {
+			sap.m.MessageToast.show("Jeeh");
+>>>>>>> branch 'master' of https://github.com/stevenspronk/Zonbewust
 		},
 
 		onCheck: function() {

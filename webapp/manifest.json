@@ -15,7 +15,7 @@
 		},
 		"dataSources": {
 			"Z_user_cds": {
-				"uri": "/sap/opu/odata/sap/Z_user_cds/",
+				"uri": "/sap/opu/odata/sap/Z_USER_CDS/",
 				"type": "OData",
 				"settings": {
 					"odataVersion": "2.0",

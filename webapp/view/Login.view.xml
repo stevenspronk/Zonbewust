@@ -6,8 +6,8 @@
 				<content>
 					<Image width="100%" height="20%" class="logo" src="images/logo.svg"/>
 					<ScrollContainer id="PandaContent" height="60%" width="100%" horizontal="true" vertical="true" focusable="false">
-						<!--<sap.ui.layout:Grid  xmlns:sap.ui.layout="sap.ui.layout" id="__grid0" class="loginTilesContainer">-->
-						<!--	<sap.ui.layout:content>-->
+						<sap.ui.layout:Grid  xmlns:sap.ui.layout="sap.ui.layout" id="__grid0" class="loginTilesContainer">
+							<sap.ui.layout:content>
 								<!--<CustomTile>-->
 								<!--	<content>-->
 								<!--		<sap.ui.layout:VerticalLayout>-->
@@ -17,35 +17,8 @@
 								<!--		</sap.ui.layout:VerticalLayout>-->
 								<!--	</content>-->
 								<!--</CustomTile>-->
-						<!--	</sap.ui.layout:content>-->
-						<!--</sap.ui.layout:Grid>-->
-						<!--<Table id="userList" width="auto" items="{GebruikersSet}" noDataText="{i18n>geenGebruikers}"-->
-						<!--	busyIndicatorDelay="{detailView>/userListDelay}" class="sapUiSmallMargin">-->
-							<!--<headerToolbar>-->
-							<!--	<Toolbar>-->
-							<!--		<Title id="statusFlow" text="{i18n>statusFlow}"/>-->
-							<!--	</Toolbar>-->
-							<!--</headerToolbar>-->
-						<!--	<columns>-->
-								<!--<Column width="30%">-->
-								<!--	<Text text="{i18n>userName}"/>-->
-								<!--</Column>-->
-								<!--<Column width="30%">-->
-								<!--	<Text text="{i18n>Status}"/>-->
-								<!--</Column>-->
-								<!--<Column width="30%">-->
-								<!--	<Text text="{i18n>BehandeldDoor}"/>-->
-								<!--</Column>-->
-						<!--	</columns>-->
-						<!--	<items id="itemsUsers">-->
-						<!--		<ColumnListItem id="columnsUsersDisplay">-->
-						<!--			<cells>-->
-										<!--<ObjectIdentifier title="{SamengesteldeNaam}" text="{path: 'Personeelsnummer', formatter: 'bpo.ui5.lib.utils.formatter.truncLeadingZeros' }"/>-->
-						<!--				<Text text="{SamengesteldeNaam}"/>-->
-						<!--			</cells>-->
-						<!--		</ColumnListItem>-->
-						<!--	</items>-->
-						<!--</Table>-->
+						</sap.ui.layout:content>
+						</sap.ui.layout:Grid>
 					</ScrollContainer>
 				</content> 
 				<footer>
