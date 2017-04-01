@@ -2,6 +2,7 @@
 	<CustomTile>
 		<content>
 			<sap.ui.layout:VerticalLayout>
+
 				<Image  src="{path:'/panda_color',formatter:'.imageFormatter'}" height="100%" width="100%" press="toGameScreen"/>
 				<Label text="{/name}" class="loginLabelUser"/>
 				<Label text="{/bamboo} Bamboos" class="loginLabelPoints"/>
