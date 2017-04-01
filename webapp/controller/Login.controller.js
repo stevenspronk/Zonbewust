@@ -11,11 +11,20 @@ sap.ui.define([
 
 		onInit: function() {
 			//Resource model opbouwen en vastleggen in de SAP.UI Core, model i18n.
+			
 			var resourceModel = new ResourceModel({
 				bundleName: "Zonbewust.controller.i18n"
 			});
 			sap.ui.getCore().setModel(resourceModel, "i18n");
-
+			
+			jQuery.sap.require("sap.ui.commons.MessageBox");
+			sap.ui.commons.MessageBox.show(
+    			"Wist je dat je in de zomer om de drie uur jezelf moet insmeren?",
+    			sap.ui.commons.MessageBox.Icon.INFORMATION,
+    			"Tip van de dag",
+    			[sap.ui.commons.MessageBox.Action.OK],
+    			function() { }
+			);
 		},
 
 		onAfterRendering: function() {
@@ -26,14 +35,13 @@ sap.ui.define([
 				success: function(oData, response) {
 
 					var pandaContent = self.getView().byId("PandaContent");
-
+					pandaContent.destroyContent();
 					for (var i = 0; i < oData.results.length; i++) {
 
 						var data = new sap.ui.model.json.JSONModel(oData.results[i]);
 						var oFragment = sap.ui.xmlfragment("Zonbewust.view.PandaTile", self);
 						oFragment.setModel(data);
 						pandaContent.addContent(oFragment);
-
 					}
 
 				},
@@ -72,10 +80,6 @@ sap.ui.define([
 		onLeaderBoard: function() {
 			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
 			oRouter.navTo("leaderboard");
-		},
-
-		onStart: function(oEvent) {
-			sap.m.MessageToast.show("Jeeh");
 		},
 
 		onCheck: function() {

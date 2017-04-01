@@ -34,12 +34,15 @@ sap.ui.define([
 		
 		changeScenery : function ()
 		{
+			this.dissapearHats();
+			
 			var oModel = this.getView().getModel();
 			
 			if(oModel.getData().panda_color === "orange")
 			{
 			this.getView().byId("gamePage").removeStyleClass('gamePageBeach');		
 			this.getView().byId("gamePage").addStyleClass('gamePageSoccer');
+			this.getView().byId("gamePage").removeStyleClass('gamePageRoom');
 			this.getView().byId("gameCharacter").setSrc('images/body/1_orange.svg');
 			this.getView().byId("gameParasol").setVisible(false);
 			this.getView().byId("gameTube").setVisible(true);
@@ -49,14 +52,22 @@ sap.ui.define([
 			{
 			this.getView().byId("gamePage").removeStyleClass('gamePageSoccer');	
 			this.getView().byId("gamePage").addStyleClass('gamePageBeach');
+			this.getView().byId("gamePage").removeStyleClass('gamePageRoom');
 			this.getView().byId("gameCharacter").setSrc('images/body/1_red.svg');
 			this.getView().byId("gameMessage").setVisible(false);
 			this.getView().byId("gameParasol").setVisible(true);
 			this.getView().byId("gameTube").setVisible(false);
 			}
-			
-		//	var oModel = this.getView().getModel();
-			console.log(oModel.panda_color);
+			else
+			{
+			this.getView().byId("gamePage").removeStyleClass('gamePageSoccer');	
+			this.getView().byId("gamePage").removeStyleClass('gamePageBeach');
+			this.getView().byId("gamePage").addStyleClass('gamePageRoom');
+			this.getView().byId("gameCharacter").setSrc('images/body/1_green.svg');
+			this.getView().byId("gameMessage").setVisible(false);
+			this.getView().byId("gameParasol").setVisible(false);
+			this.getView().byId("gameTube").setVisible(false);
+			}
 		},
 		
 
@@ -78,10 +89,45 @@ sap.ui.define([
 		},
 		
 		onTube  : function() {
-			
-			this.getView().byId("gameCharacter").setSrc('images/body/1_green.svg');
+			this.getView().byId("quiz").setVisible(true);
+		},
+		
+		onQuiz : function() {
+			this.getView().byId("quiz").setVisible(false);
 			this.getView().byId("gameTube").setVisible(false);
-			
+			this.getView().byId("gameCharacter").setSrc('images/body/6_green.svg');
+		},
+		
+		dissapearHats : function() {
+			this.getView().byId("gameHatIconLady").setVisible(false);
+			this.getView().byId("gameHatIconWestern").setVisible(false);
+			this.getView().byId("gameHatIconCowboy").setVisible(false);
+			this.getView().byId("gameHat").setVisible(false);
+			this.getView().byId("quiz").setVisible(false);
+		},
+		
+		onHat1  : function() {
+			this.dissapearHats();
+			this.getView().byId("gameHat").setSrc('images/icons/hat_lady.svg');
+			this.getView().byId("gameHat").setVisible(true);
+		},
+		
+		onHat2  : function() {
+			this.dissapearHats();
+			this.getView().byId("gameHat").setSrc('images/icons/hat_western.svg');
+			this.getView().byId("gameHat").setVisible(true);
+		},
+		
+		onHat3  : function() {
+			this.dissapearHats();
+			this.getView().byId("gameHat").setSrc('images/icons/hat_cowboy.svg');
+			this.getView().byId("gameHat").setVisible(true);
+		},
+		
+		onCap  : function(e) {
+			this.getView().byId("gameHatIconLady").setVisible(true);
+			this.getView().byId("gameHatIconWestern").setVisible(true);
+			this.getView().byId("gameHatIconCowboy").setVisible(true);
 		}
 		
 	

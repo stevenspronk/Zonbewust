@@ -7,10 +7,21 @@
 					<ScrollContainer xmlns:core="sap.ui.core" xmlns:sap.ui.layout="sap.ui.layout" width="100%" height="100%">
 						<Panel class="overlayContainer" height="100%" width="100%">
 							<content> 
+								
 								<Image height="40%" class="gameMessage" id="gameMessage" src="images/message_1.svg"/>
 								<Image height="70%" class="gameCharacter" id="gameCharacter" src="images/body/1_red.svg" press="onStart"/>
-								<Image height="50%" class="gameTube" id="gameTube" src="images/icons/tube.svg" press="onTube"/>
+								<Image height="30%" class="gameTube" id="gameTube" src="images/icons/tube.svg" press="onTube"/>
 								<Image height="50%" class="gameParasol" id="gameParasol" src="images/icons/parasol.svg" press="onParasol"/>
+								<Image height="30%" class="gameHat" id="gameHat" src="images/icons/hat_western.svg"/>
+								<Image height="10%" class="gameHatIconLady" id="gameHatIconLady" src="images/icons/hat_lady.svg" press="onHat1"/>
+								<Image height="10%" class="gameHatIconWestern" id="gameHatIconWestern" src="images/icons/hat_western.svg" press="onHat2"/>
+								<Image height="10%" class="gameHatIconCowboy" id="gameHatIconCowboy" src="images/icons/hat_cowboy.svg" press="onHat3"/>
+								<!--<Image height="10%" class="gameBambooIcon" id="gameBambooIcon" src="images/icons/bamboo.svg"/>
+								<Image height="10%" class="gameUvIcon" id="gameUvIcon" src="images/icons/uv.svg"/>-->
+								<Image height="70%" class="quiz" id="quiz"  press="onQuiz" src="images/quiz.svg"/>
+								<!--<sap.ui.layout:HorizontalLayout class="Score" >
+								<Label text="3" class="UvIndex"/><Label text="3" class="Bamboos"/>
+								</sap.ui.layout:HorizontalLayout>-->
 							</content>
 						</Panel>
 						<!--<sap.ui.layout:FixFlex class="fixFlexVertical">-->
@@ -34,7 +45,7 @@
 					<Toolbar height="15%" design="Transparent" class="gameToolbar">
 						<Image height="70%" src="images/icons/back.svg" class="loginButtons" id="btnBack" press="onBack"/>
 						<ToolbarSpacer/>
-						<Image height="70%" src="images/icons/donate.svg" class="loginButtons" id="btnDonate" press="onDonate"/>
+						<Image height="70%" src="images/icons/cap.svg" class="loginButtons" id="btnCap" press="onCap"/>
 					</Toolbar>
 				</footer>
 			</Page>

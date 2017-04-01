@@ -73,18 +73,80 @@ background-repeat: no-repeat;
   background-image: url('../images/background/beach2.svg');	
 }
 
+.gamePageRoom
+{
+background-size: cover;
+background-repeat: no-repeat;
+  background-image: url('../images/background/room.svg');	
+}
+
+
 .gameCharacter {
-    margin-top: 10%;
+    margin-top: 20%;
 }
 
 .gameTube {
-    margin-left: 22%;
-    margin-top: 20%;
+    margin-left: 30%;
+    margin-top: 40%;
 }
 
 .gameParasol {
     margin-left: 22%;
+    margin-top: 30%;
+}
+
+.gameBambooIcon {
+	margin-top: 2%;
+    margin-left: 35%;
+}
+
+.quiz {
+	margin-top: 20%;
+    display:block;
+    visibility: visible;
+}
+.gameUvIcon {
+	margin-top: 2%;
+    margin-left: 20%;
+}
+
+.UvIndex {
+	margin-top: 2%;
+}
+
+.Score {
+	width: 20%;
+}
+
+.Bamboos {
+	margin-top: 2%;
+    margin-left: 68%;
+}
+
+.gameHatIconLady, .gameHatIconWestern, .gameHatIconCowboy, .gameHatIconWitch {
     margin-top: 20%;
+    margin-left: 42%;
+    height: 5%;
+}
+
+.gameHat
+{
+	margin-top: 10%;
+}
+
+.gameHatIconWestern
+{
+	margin-top: 40%;
+}
+
+.gameHatIconCowboy
+{
+		margin-top: 30%;
+}
+
+.gameHatIconLady
+{
+		margin-top: 50%;
 }
 
 .gameMessage {
