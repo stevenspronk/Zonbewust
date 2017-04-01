@@ -23,7 +23,7 @@
     {
       "templateId": "servicecatalog.connectivityComponent",
       "templateVersion": "0.0.0",
-      "dateTimeStamp": "Fri, 31 Mar 2017 21:02:23 GMT"
+      "dateTimeStamp": "Sat, 01 Apr 2017 09:19:16 GMT"
     }
   ],
   "codeCheckingTriggers": {
@@ -48,7 +48,7 @@
   "hybrid": {
     "hatVersion": "1.25.3",
     "appNamespace": "Zonbewust",
-    "backendDestination": "SAP_MCCOY",
+    "backendDestination": "Z_USER",
     "oDataConfigs": [
       {
         "hybridOdata": {
@@ -57,13 +57,23 @@
         },
         "originOdata": {
           "name": "Z_user_cds",
-          "serviceUrl": "/sap/opu/odata/sap/Z_user_cds/"
+          "serviceUrl": "/sap/opu/odata/sap/Z_USER_CDS/"
+        }
+      },
+      {
+        "hybridOdata": {
+          "name": "Z_User.xsodata",
+          "serviceUrl": ""
+        },
+        "originOdata": {
+          "name": "Z_User.xsodata",
+          "serviceUrl": "/SSPRONK/Z_User.xsodata/"
         }
       }
     ]
   },
   "mockpreview": {
-    "mockUri": "/sap/opu/odata/sap/Z_user_cds",
+    "mockUri": "/SSPRONK/Z_User.xsodata",
     "metadataFilePath": "",
     "loadJSONFiles": false,
     "loadCustomRequests": false,

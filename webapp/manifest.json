@@ -22,6 +22,14 @@
 					"localUri": "localService/metadata.xml",
 					"annotations": []
 				}
+			},
+			"Z_User.xsodata": {
+				"uri": "/SSPRONK/Z_User.xsodata/",
+				"type": "OData",
+				"settings": {
+					"odataVersion": "2.0",
+					"localUri": "localService/Z_User.xsodata/metadata.xml"
+				}
 			}
 		}
 	},
@@ -77,7 +85,7 @@
 					"defaultBindingMode": "TwoWay",
 					"defaultCountMode": "Request"
 				},
-				"dataSource": "Z_user_cds",
+				"dataSource": "Z_User.xsodata",
 				"preload": true
 			}
 		},

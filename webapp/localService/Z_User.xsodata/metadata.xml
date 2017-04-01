@@ -1,0 +1,45 @@
+<edmx:Edmx
+    xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" Version="1.0">
+    <edmx:DataServices
+        xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" m:DataServiceVersion="2.0">
+        <Schema
+            xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices"
+            xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"
+            xmlns="http://schemas.microsoft.com/ado/2008/09/edm" Namespace="SSPRONK.Z_User">
+            <EntityType Name="Z_UserType">
+                <Key>
+                    <PropertyRef Name="name"/>
+                </Key>
+                <Property Name="name" Type="Edm.String" Nullable="false" MaxLength="100"/>
+                <Property Name="age" Type="Edm.Int32"/>
+                <Property Name="panda_gender" Type="Edm.String" MaxLength="1"/>
+                <Property Name="panda_name" Type="Edm.String" MaxLength="100"/>
+                <Property Name="bamboo" Type="Edm.Int32"/>
+                <Property Name="panda_color" Type="Edm.String" MaxLength="6"/>
+                <Property Name="Calc_Mode" Type="Edm.String" MaxLength="8"/>
+                <Property Name="TEMPERATURE" Type="Edm.Int32"/>
+                <Property Name="sun_up" Type="Edm.DateTime"/>
+                <Property Name="MinutesSunUp" Type="Edm.Int32"/>
+                <Property Name="last_rub" Type="Edm.DateTime"/>
+                <Property Name="MinutesOpenRub" Type="Edm.Int32"/>
+                <Property Name="parasol" Type="Edm.DateTime"/>
+                <Property Name="MinutesOpenParasol" Type="Edm.Int32"/>
+                <Property Name="item_1" Type="Edm.String" MaxLength="1"/>
+                <Property Name="item_2" Type="Edm.String" MaxLength="1"/>
+                <Property Name="item_3" Type="Edm.String" MaxLength="1"/>
+                <Property Name="item_4" Type="Edm.String" MaxLength="1"/>
+                <Property Name="item_5" Type="Edm.String" MaxLength="1"/>
+                <Property Name="item_6" Type="Edm.String" MaxLength="1"/>
+                <Property Name="item_7" Type="Edm.String" MaxLength="1"/>
+                <Property Name="item_8" Type="Edm.String" MaxLength="1"/>
+                <Property Name="item_9" Type="Edm.String" MaxLength="1"/>
+                <Property Name="item_10" Type="Edm.String" MaxLength="1"/>
+                <Property Name="item_11" Type="Edm.String" MaxLength="1"/>
+                <Property Name="item_12" Type="Edm.String" MaxLength="1"/>
+            </EntityType>
+            <EntityContainer Name="Z_User" m:IsDefaultEntityContainer="true">
+                <EntitySet Name="Z_User" EntityType="SSPRONK.Z_User.Z_UserType"/>
+            </EntityContainer>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

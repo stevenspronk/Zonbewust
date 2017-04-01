@@ -26,6 +26,14 @@
         "name": "SAP_MCCOY"
       },
       "description": "SAP HANA McCoy"
+    },
+    {
+      "path": "/SSPRONK",
+      "target": {
+        "type": "destination",
+        "name": "Z_USER"
+      },
+      "description": "Users Panda"
     }
   ],
   "sendWelcomeFileRedirect": true

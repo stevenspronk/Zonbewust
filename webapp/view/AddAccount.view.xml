@@ -8,14 +8,14 @@
 				<form:content>
 					<core:Title text="{i18n>registreer}" id="coreRegistratieTitle"/>
 					<Label labelFor="txtSamengesteldeNaam" text="{i18n>naam}" id="lblSamengesteldeNaam" required="true"/>
-					<Input id="txtSamengesteldeNaam" value="{oUsers>name}" width="60%"/>
+					<Input id="txtSamengesteldeNaam" value="{/name}" width="60%"/>
 					<Label labelFor="txtLeeftijd" text="{i18n>leeftijd}" id="lblLeeftijd" required="true"/>
-					<Input id="txtLeeftijd" value="{oUsers>age}" width="60%"/>
+					<Input id="txtLeeftijd" value="{/age}" width="60%"/>
 					<Label text="{i18n>panda}" id="lblPandaGeslacht" required="true"/>
 					<ToggleButton id="btnMale" width="60%"/>
 					<ToggleButton id="btnFemale" width="60%"/>
 					<Label labelFor="txtNaamPanda" text="{i18n>naamPanda}" id="lblNaamPanda"/>
-					<Input id="txtNaamPanda" value="{oUsers>panda_name}" width="60%"/>
+					<Input id="txtNaamPanda" value="{/panda_name}" width="60%"/>
 				</form:content>
 			</form:SimpleForm>
 			<Button text="{i18n>btnStart}" width="120px" id="btnStart" press="onSave"/>
