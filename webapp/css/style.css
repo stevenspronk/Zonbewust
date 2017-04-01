@@ -1,3 +1,13 @@
+html, body
+{
+    height: 100%;
+}
+
+.sapMScrollContScroll
+{
+	height: 100%;
+	vertical-align: bottom;
+}
 /* Enter your custom styles here */
 .loginPage {
 	background-image: url('../images/background/login.svg');
@@ -39,3 +49,29 @@
 .loginLabelPoints {
 	font-style: italic;
 }
+
+.gamePage {
+	background-image: url('../images/background/beach2.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.gameCharacter
+{
+margin-top: 15%;
+margin-left: 30%;
+float: left;
+}
+
+.gameIcon {
+	margin-top: 30%;
+	margin-left: 10px;
+	float: left;
+}
+.gameToolbar
+{
+}
+
+.flexEx .sapMFlexItem:first-child {
+                height: calc(100% - 50px) !important;
+            }
