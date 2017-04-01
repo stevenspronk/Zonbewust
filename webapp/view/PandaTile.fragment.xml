@@ -2,7 +2,7 @@
 	<CustomTile>
 		<content>
 			<sap.ui.layout:VerticalLayout>
-				<Image  src="images/faces/1_red.svg" height="100%" width="100%" press="onStart"/>
+				<Image  src="images/faces/1_red.svg" height="100%" width="100%" press="toGameScreen"/>
 				<Label text="{/name}" class="loginLabelUser"/>
 				<Label text="{/bamboo} Bamboos" class="loginLabelPoints"/>
 			</sap.ui.layout:VerticalLayout>

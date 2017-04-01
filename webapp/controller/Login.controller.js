@@ -48,11 +48,11 @@ sap.ui.define([
 		},
 
 		toGameScreen: function(oEvent) {
+		var navName = sap.ui.getCore().byId(oEvent.getParameters().id).getModel().getData().name;
 			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
-			
-			// oEvent.getSource().
+
 			oRouter.navTo("gamescreen", {
-				// name: navName
+				name: navName
 			});
 		},
 		onDonate: function() {
