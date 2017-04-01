@@ -63,17 +63,11 @@ sap.ui.define([
     		var imageSrc = "images/faces/1_" + value + ".svg";
     		return imageSrc;
 		},
-		
-		imageFormatter : function(value) {
-    		var imageSrc = "images/faces/1_" + value + ".svg";
-    		return imageSrc;
-		},
 
 		onAddAccount: function() {
 			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
 			oRouter.navTo("addaccount");
 		},
-
 
 		onLeaderBoard: function() {
 			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
