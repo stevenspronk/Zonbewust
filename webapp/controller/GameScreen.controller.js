@@ -9,6 +9,9 @@ sap.ui.define([
 		onInit: function() {
 			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
 			oRouter.getRoute("gamescreen").attachMatched(this._onRouteMatched, this);
+			
+			
+			
 		},
 		
 		_onRouteMatched: function(oEvent) {

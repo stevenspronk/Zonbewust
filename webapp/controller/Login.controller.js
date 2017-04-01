@@ -9,6 +9,9 @@ sap.ui.define([
 
 	return Controller.extend("Zonbewust.controller.Login", {
 
+
+
+
 		onInit: function() {
 			//Resource model opbouwen en vastleggen in de SAP.UI Core, model i18n.
 			var resourceModel = new ResourceModel({
@@ -25,13 +28,17 @@ sap.ui.define([
 			oUsers.read(path, {
 				success: function(oData, response) {
 
-					// oData.results[];
-						self.toGameScreen(oData.results[1].name);
-					// for (var i = 0; i < oData.results.length; i++) {
+					var pandaContent = self.getView().byId("PandaContent");
 
-					// 	//console.log(oData.results[i]);
-					// 	self.toGameScreen(oData.results[i].name);
-					// }
+					for (var i = 0; i < oData.results.length; i++) {
+
+						var data = new sap.ui.model.json.JSONModel(oData.results[i]);
+
+						var oFragment = sap.ui.xmlfragment("Zonbewust.view.PandaTile", this);
+						 oFragment.setModel(data); 
+						pandaContent.addContent(oFragment);
+
+					}
 
 				},
 				error: function(oError) {
@@ -41,10 +48,12 @@ sap.ui.define([
 
 		},
 
-		toGameScreen: function(navName) {
+		toGameScreen: function(oEvent) {
 			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+			
+			// oEvent.getSource().
 			oRouter.navTo("gamescreen", {
-				name: navName
+				// name: navName
 			});
 		},
 		onDonate: function() {
@@ -60,10 +69,7 @@ sap.ui.define([
 		},
 
 		onStart: function(oEvent) {
-			//Start Event dat leidt naar het GameScreen
-			//Dit kan via de AddAccount Dialog of door direct een van de bestaande accounts te kiezen
-
-			//Event voor navigatie-routing naar Gamescreen
+		sap.m.MessageToast.show("Jeeh");
 
 		},
 
