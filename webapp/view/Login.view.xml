@@ -61,47 +61,4 @@
 			</Page>
 		</pages>
 	</App>
-=======
-<mvc:View xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="Zonbewust.controller.Login">
-	<Page title="{i18n>LoginTitle}" class="loginPage" showHeader="false" navButtonText="test" showNavButton="true">
-		<content>
-			<Image width="100%" height="35%" class="logo" src="images/logo.svg"/>
-			<Table id="userList" width="auto" items="{GebruikersSet}" noDataText="{i18n>geenGebruikers}"
-				busyIndicatorDelay="{detailView>/userListDelay}" class="sapUiSmallMargin">
-				<!--<headerToolbar>-->
-				<!--	<Toolbar>-->
-				<!--		<Title id="statusFlow" text="{i18n>statusFlow}"/>-->
-				<!--	</Toolbar>-->
-				<!--</headerToolbar>-->
-				<columns>
-					<!--<Column width="30%">-->
-					<!--	<Text text="{i18n>userName}"/>-->
-					<!--</Column>-->
-					<!--<Column width="30%">-->
-					<!--	<Text text="{i18n>Status}"/>-->
-					<!--</Column>-->
-					<!--<Column width="30%">-->
-					<!--	<Text text="{i18n>BehandeldDoor}"/>-->
-					<!--</Column>-->
-				</columns>
-				<items id="itemsUsers">
-					<ColumnListItem id="columnsUsersDisplay">
-						<cells>
-							<!--<ObjectIdentifier title="{SamengesteldeNaam}" text="{path: 'Personeelsnummer', formatter: 'bpo.ui5.lib.utils.formatter.truncLeadingZeros' }"/>-->
-							<Text text="{SamengesteldeNaam}"/>
-						</cells>
-					</ColumnListItem>
-				</items>
-			</Table>
-		</content>
-		<footer>
-			<Toolbar height="30%" design="Transparent">
-				<Image height="50%" src="images/icons/scoreboard.svg" class="loginButtons" id="btnLeaderboard" press="onLeaderBoard"/>
-				<ToolbarSpacer/>
-				<Image height="30%" src="images/icons/donate.svg" class="loginButtons" id="btnDonate" press="onDonate"/>
-				<ToolbarSpacer/>
-				<Image height="50%" src="images/icons/add_user.svg" class="loginButtons" id="btnAdd" press="onAddAccount"/>
-			</Toolbar>
-		</footer>
-	</Page>
 </mvc:View>
