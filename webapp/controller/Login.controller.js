@@ -19,17 +19,20 @@ sap.ui.define([
 		},
 
 		onAfterRendering: function() {
+			var self = this;
 			var oUsers = this.getView().getModel("oUsers");
 			var path = "/Z_User";
 			oUsers.read(path, {
 				success: function(oData, response) {
-				
-				// oData.results[];
-				for (var i = 0; i < oData.results.length; i++) { 
-				
-				//console.log(oData.results[i]);
-}
-				
+
+					// oData.results[];
+						self.toGameScreen(oData.results[1].name);
+					// for (var i = 0; i < oData.results.length; i++) {
+
+					// 	//console.log(oData.results[i]);
+					// 	self.toGameScreen(oData.results[i].name);
+					// }
+
 				},
 				error: function(oError) {
 					sap.m.MessageToast.show(oError.message);
@@ -38,11 +41,17 @@ sap.ui.define([
 
 		},
 
+		toGameScreen: function(navName) {
+			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+			oRouter.navTo("gamescreen", {
+				name: navName
+			});
+		},
 		onDonate: function() {
 			var url = "https://secure.kwf.nl/ikdoneervoor?utm_source=il-64#donate_form";
 			window.open(url);
 		},
-		
+
 		onAddAccount: function() {
 
 			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
@@ -55,8 +64,6 @@ sap.ui.define([
 			//Dit kan via de AddAccount Dialog of door direct een van de bestaande accounts te kiezen
 
 			//Event voor navigatie-routing naar Gamescreen
-			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
-			oRouter.navTo("gamescreen");
 
 		},
 

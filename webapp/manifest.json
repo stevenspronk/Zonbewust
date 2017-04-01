@@ -92,25 +92,29 @@
 					"viewType": "XML",
 					"transition": "slide",
 					"clearAggregation": true,
-					"viewName": "Login"
+					"viewName": "Login",
+					"viewLevel": 1
 				},
 				"leaderboard": {
 					"viewType": "XML",
 					"transition": "slide",
 					"clearAggregation": true,
-					"viewName": "Leaderboard"
+					"viewName": "Leaderboard",
+					"viewLevel": 2
 				},
 				"gamescreen": {
 					"viewType": "XML",
 					"transition": "slide",
 					"clearAggregation": true,
-					"viewName": "GameScreen"
+					"viewName": "GameScreen",
+					"viewLevel": 2
 				},
 				"addaccount": {
 					"viewType": "XML",
 					"transition": "slide",
 					"clearAggregation": true,
-					"viewName": "AddAccount"
+					"viewName": "AddAccount",
+					"viewLevel": 2
 				}
 			},
 			"routes": [{
@@ -127,7 +131,7 @@
 				"target": ["leaderboard"]
 			}, {
 				"name": "gamescreen",
-				"pattern": "gamescreen",
+				"pattern": "gamescreen/{name}",
 				"titleTarget": "",
 				"greedy": false,
 				"target": ["gamescreen"]
