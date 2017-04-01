@@ -12,18 +12,21 @@
 			<form:SimpleForm editable="true" layout="ResponsiveGridLayout" id="formChangeAccount"   maxContainerCols="2" labelSpanL="4"
 				labelSpanM="4" emptySpanL="0" emptySpanM="0" columnsL="2" columnsM="2" class="editableForm" labelMinWidth="250">
 				<form:content>
-					<Label width="50%" labelFor="txtSamengesteldeNaam" text="{i18n>naam}" id="lblSamengesteldeNaam" required="true"/>
-					<Input  width="50%" id="txtSamengesteldeNaam" value="{/name}" />
-					<Label  width="50%" labelFor="txtLeeftijd" text="{i18n>leeftijd}" id="lblLeeftijd" required="true"/>
-					<Input  width="50%" id="txtLeeftijd" value="{/age}" />
-					<Label  width="50%" text="{i18n>panda}" id="lblPandaGeslacht" required="true"/>
-					<ToggleButton width="25%" id="btnMale" text="Jongen"/>
-					<ToggleButton width="25%" id="btnFemale" text="Meisje" />
-					<Label  width="50%" labelFor="txtNaamPanda" text="{i18n>naamPanda}" id="lblNaamPanda"/>
-					<Input  width="50%" id="txtNaamPanda"  value="{/panda_name}"/>
+					<Label  labelFor="txtSamengesteldeNaam" text="{i18n>naam}" id="lblSamengesteldeNaam" required="true"/>
+					<Input   id="txtSamengesteldeNaam" value="{/name}" />
+					<Label   labelFor="txtLeeftijd" text="{i18n>leeftijd}" id="lblLeeftijd" required="true"/>
+					<Input  id="txtLeeftijd" value="{/age}" />
+					<Label   text="{i18n>panda}" id="lblPandaGeslacht" required="true"/>
+					<ToggleButton  id="btnMale" text="Jongen"/>
+					<ToggleButton  id="btnFemale" text="Meisje" />
+					<Label   labelFor="txtNaamPanda" text="{i18n>naamPanda}" id="lblNaamPanda" required="true"/>
+					<Input   id="txtNaamPanda"  value="{/panda_name}"/>
+					<Label   labelFor="txtNaamPanda2"  id="lblNaamPanda2"/>
+					<Button width="100%" text="OK"  id="btnStart" press="onSave"/>
 				</form:content>
+				
 			</form:SimpleForm>
-			<Button text="{i18n>btnStart}" width="120px" id="btnStart" press="onSave"/>
+			
 			</content></Panel>
 					</ScrollContainer>
 					

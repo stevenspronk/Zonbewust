@@ -19,7 +19,7 @@ sap.ui.define([
 			
 			jQuery.sap.require("sap.ui.commons.MessageBox");
 			sap.ui.commons.MessageBox.show(
-    			"Wist je dat je in de zomer om de drie uur jezelf moet insmeren?",
+    			"Wist je dat je in de zomer om de twee uur jezelf moet insmeren?",
     			sap.ui.commons.MessageBox.Icon.INFORMATION,
     			"Tip van de dag",
     			[sap.ui.commons.MessageBox.Action.OK],
