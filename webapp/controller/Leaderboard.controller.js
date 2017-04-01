@@ -4,7 +4,7 @@ sap.ui.define([
 	"use strict";
 
 	return Controller.extend("Zonbewust.controller.Leaderboard", {
-	
+	var oModel = this.getView().getModel("oUsers");
 
 	});
 

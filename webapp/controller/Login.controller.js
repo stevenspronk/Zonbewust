@@ -9,9 +9,6 @@ sap.ui.define([
 
 	return Controller.extend("Zonbewust.controller.Login", {
 
-  
-
-
 		onInit: function() {
 			//Resource model opbouwen en vastleggen in de SAP.UI Core, model i18n.
 			var resourceModel = new ResourceModel({
@@ -34,7 +31,7 @@ sap.ui.define([
 
 						var data = new sap.ui.model.json.JSONModel(oData.results[i]);
 						var oFragment = sap.ui.xmlfragment("Zonbewust.view.PandaTile", self);
-						oFragment.setModel(data); 
+						oFragment.setModel(data);
 						pandaContent.addContent(oFragment);
 
 					}
@@ -48,28 +45,27 @@ sap.ui.define([
 		},
 
 		toGameScreen: function(oEvent) {
+			var navName = sap.ui.getCore().byId(oEvent.getParameters().id).getModel().getData().name;
 			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
-			
-			// oEvent.getSource().
+
 			oRouter.navTo("gamescreen", {
-				// name: navName
+				name: navName
 			});
 		},
+
 		onDonate: function() {
 			var url = "https://secure.kwf.nl/ikdoneervoor?utm_source=il-64#donate_form";
 			window.open(url);
 		},
 
 		onAddAccount: function() {
-
 			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
 			oRouter.navTo("addaccount");
-
 		},
 
-		onStart: function(oEvent) {
-		sap.m.MessageToast.show("Jeeh");
-
+		onLeaderBoard: function() {
+			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+			oRouter.navTo("leaderboard");
 		},
 
 		onCheck: function() {

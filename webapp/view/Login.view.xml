@@ -50,7 +50,7 @@
 				</content> 
 				<footer>
 					<Toolbar height="15%" design="Transparent">
-						<Image height="90%" src="images/icons/scoreboard.svg" class="loginButtons" id="btnLeaderboard" press="onScoreBoard"/>
+						<Image height="90%" src="images/icons/scoreboard.svg" class="loginButtons" id="btnLeaderboard" press="onLeaderBoard"/>
 						<ToolbarSpacer/>
 						<Image height="60%" src="images/icons/donate.svg" class="loginButtons" id="btnDonate" press="onDonate"/>
 						<ToolbarSpacer/>

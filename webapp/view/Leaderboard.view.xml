@@ -1,9 +1,18 @@
-<mvc:View xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="Zonbewust.controller.Leaderboard"
-	displayBlock="true">
+<mvc:View xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="Zonbewust.controller.Leaderboard" displayBlock="true">
 	<App>
 		<pages>
 			<Page title="{i18n>LeaderboardTitle}">
-				<content></content>
+				<content>
+					
+				<List items="{/Z_User}" noDataText="Drop list items here" id="__list0">
+					
+				    <items>
+					
+				        <StandardListItem type="Navigation" title="{oUser>/name}" description="{panda_name}" icon="sap-icon://picture" id="__item0"/>
+					</items>
+				</List>
+					
+				</content>
 			</Page>
 		</pages>
 	</App>
