@@ -2,14 +2,14 @@
 	controllerName="Zonbewust.controller.GameScreen" displayBlock="true">
 	<App>
 		<pages>
-			<Page title="{i18n>GameScreenTitle}" class="gamePage" showHeader="false">
+			<Page title="{i18n>GameScreenTitle}" id="gamePage" class="gamePage" showHeader="false">
 				<content>
 					<ScrollContainer xmlns:core="sap.ui.core" xmlns:sap.ui.layout="sap.ui.layout" width="100%" height="100%">
 						<Panel class="overlayContainer" height="100%" width="100%">
 							<content> 
 								<Image height="40%" class="gameMessage" id="gameMessage" src="images/message_1.svg"/>
 								<Image height="70%" class="gameCharacter" id="gameCharacter" src="images/body/1_red.svg" press="onStart"/>
-								<!--<Image height="calc(100% - 70%)" class="gameIcon" id="gameTube" src="images/icons/tube.svg" press="onTube"/>-->
+								<Image height="50%" class="gameTube" id="gameTube" src="images/icons/tube.svg" press="onTube"/>
 								<Image height="50%" class="gameParasol" id="gameParasol" src="images/icons/parasol.svg" press="onParasol"/>
 							</content>
 						</Panel>

@@ -56,13 +56,30 @@ body {
 }
 
 .gamePage {
-    background-image: url('../images/background/beach2.svg');
     background-size: cover;
     background-repeat: no-repeat;
 }
 
+.gamePageSoccer
+{
+background-repeat: no-repeat;
+  background-image: url('../images/background/soccer.svg');	
+}
+  
+.gamePageBeach
+{
+background-size: cover;
+background-repeat: no-repeat;
+  background-image: url('../images/background/beach2.svg');	
+}
+
 .gameCharacter {
     margin-top: 10%;
+}
+
+.gameTube {
+    margin-left: 22%;
+    margin-top: 20%;
 }
 
 .gameParasol {

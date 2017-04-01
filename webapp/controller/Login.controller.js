@@ -72,6 +72,7 @@ sap.ui.define([
 		onLeaderBoard: function() {
 			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
 			oRouter.navTo("leaderboard");
+		},
 
 		onStart: function(oEvent) {
 			sap.m.MessageToast.show("Jeeh");
